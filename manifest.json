@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "YouCode Tracker",
+    "version": "1.0",
+    "description": "Track Veille and Live Coding assignments across your class.",
+    "permissions": [
+        "activeTab"
+    ],
+    "host_permissions": [
+        "*://*.youcode.ma/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.youcode.ma/*"
+            ],
+            "js": [
+                "content_main.js"
+            ],
+            "css": [
+                "styles.css"
+            ],
+            "run_at": "document_idle",
+            "world": "MAIN"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "styles.css"
+            ],
+            "matches": [
+                "*://*.youcode.ma/*"
+            ]
+        }
+    ]
+}
