@@ -25,7 +25,7 @@ A Chrome extension for YouCode Intranet that helps you track Veille and Live Cod
 1. Open Chrome and navigate to `chrome://extensions`
 2. Enable **Developer Mode** (toggle in top right)
 3. Click **Load Unpacked**
-4. Select the `youcode_points_extension` folder
+4. Select the `youcode-tracker` folder
 
 ## Usage
 
@@ -39,7 +39,7 @@ A Chrome extension for YouCode Intranet that helps you track Veille and Live Cod
 ## Files
 
 ```
-youcode_class_radar/
+youcode-tracker/
 ├── manifest.json       # Extension configuration
 ├── content_main.js     # Main logic
 ├── styles.css          # UI styles
