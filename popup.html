@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>YouCode Tracker</h1>
+            <div class="tabs">
+                <button class="tab active" data-tab="assignments">Assignments</button>
+                <button class="tab" data-tab="stats">Stats</button>
+            </div>
+        </header>
+
+        <div class="controls">
+            <button id="scan-btn" class="primary-btn">SCAN CLASS</button>
+            <div class="filters">
+                <select id="type-filter">
+                    <option value="all">All Types</option>
+                    <option value="veille">Veille</option>
+                    <option value="live">Live Coding</option>
+                </select>
+                <select id="date-filter">
+                    <option value="week">This Week</option>
+                    <option value="all">All Time</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="assignments-tab" class="tab-content active">
+            <div id="assignment-list">
+                <div class="empty-state">Navigate to Leaderboard and click Scan</div>
+            </div>
+            <button id="export-btn" class="export-btn" style="display:none">
+                Export to Google Calendar
+            </button>
+        </div>
+
+        <div id="stats-tab" class="tab-content">
+            <div id="stats-content">
+                <div class="empty-state">Scan first to see stats</div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <span class="legend-past">Past</span>
+            <span class="legend-today">Today</span>
+            <span class="legend-tomorrow">Tomorrow</span>
+            <span class="legend-future">Future</span>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
