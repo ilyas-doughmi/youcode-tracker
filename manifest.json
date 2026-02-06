@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "YouCode Tracker",
-    "version": "2.0",
+    "version": "3.0",
     "description": "Track Veille and Live Coding assignments across your class.",
     "permissions": [
         "activeTab",

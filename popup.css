@@ -367,3 +367,397 @@ header h1 {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 2px;
 }
+
+.search-box {
+    margin-bottom: 12px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.user-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.user-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary);
+}
+
+.user-card img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #333;
+}
+
+.user-card-info {
+    flex: 1;
+}
+
+.user-card-name {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.user-card-username {
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+.user-card-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#user-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 350px;
+    overflow: hidden;
+}
+
+.modal-header {
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-header h3 {
+    font-size: 15px;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #333;
+}
+
+.modal-name {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.modal-username {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.points-input {
+    margin-bottom: 12px;
+}
+
+.points-input label {
+    display: block;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.points-input input,
+.points-input select {
+    width: 100%;
+    padding: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.points-input input:focus,
+.points-input select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+#submit-points {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.points-result {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.points-result.success {
+    background: rgba(102, 187, 106, 0.2);
+    color: var(--tomorrow);
+}
+
+.points-result.error {
+    background: rgba(239, 83, 80, 0.2);
+    color: #ef5350;
+}
+
+.diagnose-btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    background: var(--surface);
+    border: 1px dashed var(--primary);
+    border-radius: 8px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.diagnose-btn:hover {
+    background: rgba(171, 71, 188, 0.1);
+}
+
+#diagnose-result {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#diagnose-result h4 {
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+#diagnose-result ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+#diagnose-result li {
+    margin-bottom: 4px;
+    color: var(--text-muted);
+}
+
+#diagnose-result code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--today);
+}
+
+.security-section {
+    padding: 4px;
+}
+
+.security-warning {
+    background: rgba(255, 167, 38, 0.15);
+    border: 1px solid rgba(255, 167, 38, 0.3);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    color: var(--today);
+    text-align: center;
+}
+
+.security-btn {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #ef5350, #c62828);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(239, 83, 80, 0.3);
+}
+
+.security-btn:hover {
+    transform: scale(1.02);
+}
+
+.security-btn:disabled {
+    opacity: 0.5;
+}
+
+#security-results {
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.vuln-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
+}
+
+.vuln-card.critical {
+    border-left: 3px solid #ef5350;
+    background: rgba(239, 83, 80, 0.08);
+}
+
+.vuln-card.warning {
+    border-left: 3px solid var(--today);
+    background: rgba(255, 167, 38, 0.08);
+}
+
+.vuln-card.info {
+    border-left: 3px solid var(--future);
+}
+
+.vuln-card.safe {
+    border-left: 3px solid var(--tomorrow);
+    background: rgba(102, 187, 106, 0.08);
+}
+
+.vuln-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.vuln-icon {
+    font-size: 16px;
+}
+
+.vuln-title {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.vuln-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.vuln-detail {
+    font-size: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+.security-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.summary-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+
+.summary-count {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.summary-label {
+    font-size: 9px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.summary-item.critical .summary-count {
+    color: #ef5350;
+}
+
+.summary-item.warning .summary-count {
+    color: var(--today);
+}
+
+.summary-item.info .summary-count {
+    color: var(--future);
+}
+
+.summary-item.safe .summary-count {
+    color: var(--tomorrow);
+}

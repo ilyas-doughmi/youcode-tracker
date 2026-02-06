@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="popup.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -11,6 +13,8 @@
             <div class="tabs">
                 <button class="tab active" data-tab="assignments">Assignments</button>
                 <button class="tab" data-tab="stats">Stats</button>
+                <button class="tab" data-tab="points">Points</button>
+                <button class="tab" data-tab="security">Security</button>
             </div>
         </header>
 
@@ -44,6 +48,31 @@
             </div>
         </div>
 
+        <div id="points-tab" class="tab-content">
+            <div class="points-section">
+                <button id="diagnose-btn" class="diagnose-btn">🔍 Diagnose Points API</button>
+                <div id="diagnose-result" style="display:none"></div>
+                <div class="search-box">
+                    <input type="text" id="user-search" placeholder="Search by name...">
+                </div>
+                <div id="user-list">
+                    <div class="empty-state">Scan class first to load users</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="security-tab" class="tab-content">
+            <div class="security-section">
+                <div class="security-warning">
+                    ⚠️ Only use on systems you have permission to test
+                </div>
+                <button id="security-scan-btn" class="security-btn">🛡️ Run Security Scan</button>
+                <div id="security-results">
+                    <div class="empty-state">Click scan to check page security</div>
+                </div>
+            </div>
+        </div>
+
         <div class="legend">
             <span class="legend-past">Past</span>
             <span class="legend-today">Today</span>
@@ -51,6 +80,42 @@
             <span class="legend-future">Future</span>
         </div>
     </div>
+
+    <div id="points-modal" class="modal" style="display:none">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Points</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="user-info">
+                    <img id="modal-user-photo" class="modal-avatar" src="">
+                    <div>
+                        <div id="modal-user-name" class="modal-name"></div>
+                        <div id="modal-user-username" class="modal-username"></div>
+                    </div>
+                </div>
+                <div class="points-input">
+                    <label>Points to add:</label>
+                    <input type="number" id="points-amount" value="10" min="1" max="100">
+                </div>
+                <div class="points-input">
+                    <label>Reason:</label>
+                    <select id="points-reason">
+                        <option value="veille">Veille Presentation</option>
+                        <option value="livecoding">Live Coding</option>
+                        <option value="help">Helping Others</option>
+                        <option value="participation">Active Participation</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button id="submit-points" class="primary-btn">Add Points</button>
+                <div id="points-result" class="points-result"></div>
+            </div>
+        </div>
+    </div>
+
     <script src="popup.js"></script>
 </body>
+
 </html>
