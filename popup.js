@@ -1,7 +1,7 @@
 let allAssignments = [];
 let typeFilter = 'all';
-let dateFilter = 'week';
-let sortOrder = 'future-today-past';
+let dateFilter = 'all';
+let sortOrder = 'today-future-past';
 let statsSearchTerm = '';
 
 document.querySelectorAll('.tab').forEach(tab => {
@@ -240,8 +240,10 @@ function renderAssignments() {
 
             html += `<div class="section-title">${group.title}</div>`;
             group.items.forEach(item => {
-                const type = getAssignmentType(item);
-                const typeLabel = type === 'veille' ? 'Veille' : 'Live Coding';
+                const type = item.type;
+                let typeLabel = 'Other';
+                if (type === 'veille') typeLabel = 'Veille';
+                else if (type === 'live') typeLabel = 'Live Coding';
 
                 const avatarsHtml = item.owners.map(o => {
                     let photoUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(o.name)}&background=7b1fa2&color=fff&size=64`;

@@ -7,7 +7,7 @@
   **A Chrome extension for YouCode Intranet that helps you track Veille and Live Coding assignments across your entire class.**
   
   [![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](chrome://extensions/)
-  [![Version](https://img.shields.io/badge/Version-3.0.0-green?style=for-the-badge)](https://github.com/)
+  [![Version](https://img.shields.io/badge/Version-3.0.1-green?style=for-the-badge)](https://github.com/)
   [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 </div>
 
@@ -92,9 +92,15 @@ youcode-tracker/
 
 ## Version
 
-3.0.0
+3.0.1
 
 ## Changelog
+
+### v3.0.1
+- Fixed "Live Coding" name display (was showing as default "Other")
+- Changed default sort order to Today → Future → Past
+- Refined assignment type display logic
+- Reordered date and sort filter options for better usability
 
 ### v3.0.0
 - Added flexible sorting options (Future, Today, Past)
